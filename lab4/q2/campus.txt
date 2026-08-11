@@ -1,0 +1,6 @@
+Big data technologies are used to process large data sets.
+Hadoop provides distributed storage and distributed processing.
+Pig is a high level data flow platform for Hadoop.
+Pig Latin provides simple data processing operations.
+Hadoop and Pig are important technologies for big data processing.
+

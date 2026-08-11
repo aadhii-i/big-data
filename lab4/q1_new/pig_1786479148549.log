@@ -1,0 +1,58 @@
+Pig Stack Trace
+---------------
+ERROR 1200: <line 1, column 16>  mismatched input '..' expecting QUOTEDSTRING
+
+Failed to parse: <line 1, column 16>  mismatched input '..' expecting QUOTEDSTRING
+	at org.apache.pig.parser.QueryParserDriver.parse(QueryParserDriver.java:244)
+	at org.apache.pig.parser.QueryParserDriver.parse(QueryParserDriver.java:182)
+	at org.apache.pig.PigServer$Graph.validateQuery(PigServer.java:1800)
+	at org.apache.pig.PigServer$Graph.registerQuery(PigServer.java:1773)
+	at org.apache.pig.PigServer.registerQuery(PigServer.java:708)
+	at org.apache.pig.tools.grunt.GruntParser.processPig(GruntParser.java:1118)
+	at org.apache.pig.tools.pigscript.parser.PigScriptParser.parse(PigScriptParser.java:512)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:231)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:206)
+	at org.apache.pig.tools.grunt.Grunt.run(Grunt.java:66)
+	at org.apache.pig.Main.run(Main.java:564)
+	at org.apache.pig.Main.main(Main.java:175)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.apache.hadoop.util.RunJar.run(RunJar.java:333)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:254)
+================================================================================
+Pig Stack Trace
+---------------
+ERROR 1200: Pig script failed to parse: <line 1, column 20> Undefined alias: students
+
+Failed to parse: Pig script failed to parse: <line 1, column 20> Undefined alias: students
+	at org.apache.pig.parser.QueryParserDriver.parse(QueryParserDriver.java:199)
+	at org.apache.pig.PigServer$Graph.validateQuery(PigServer.java:1800)
+	at org.apache.pig.PigServer$Graph.registerQuery(PigServer.java:1773)
+	at org.apache.pig.PigServer.registerQuery(PigServer.java:708)
+	at org.apache.pig.tools.grunt.GruntParser.processPig(GruntParser.java:1118)
+	at org.apache.pig.tools.pigscript.parser.PigScriptParser.parse(PigScriptParser.java:512)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:231)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:206)
+	at org.apache.pig.tools.grunt.Grunt.run(Grunt.java:66)
+	at org.apache.pig.Main.run(Main.java:564)
+	at org.apache.pig.Main.main(Main.java:175)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.apache.hadoop.util.RunJar.run(RunJar.java:333)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:254)
+Caused by: <line 1, column 20> Undefined alias: students
+	at org.apache.pig.parser.AstValidator.validateAliasRef(AstValidator.java:278)
+	at org.apache.pig.parser.AstValidator.rel(AstValidator.java:6557)
+	at org.apache.pig.parser.AstValidator.filter_clause(AstValidator.java:7349)
+	at org.apache.pig.parser.AstValidator.op_clause(AstValidator.java:1683)
+	at org.apache.pig.parser.AstValidator.general_statement(AstValidator.java:1035)
+	at org.apache.pig.parser.AstValidator.statement(AstValidator.java:499)
+	at org.apache.pig.parser.AstValidator.query(AstValidator.java:373)
+	at org.apache.pig.parser.QueryParserDriver.validateAst(QueryParserDriver.java:258)
+	at org.apache.pig.parser.QueryParserDriver.parse(QueryParserDriver.java:186)
+	... 16 more
+================================================================================

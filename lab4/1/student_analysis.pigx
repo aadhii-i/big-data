@@ -1,0 +1,17 @@
+students = LOAD '/user/$USER/pig-q1/input/students.csv'
+USING PigStorage(',')
+AS (id:int, name:chararray, department:chararray, marks:int);
+
+DUMP students;
+
+high_marks = FILTER students BY marks > 80;
+
+DUMP high_marks;
+
+sorted_students = ORDER high_marks BY marks DESC;
+
+DUMP sorted_students;
+
+top3 = LIMIT sorted_students 3;
+
+DUMP top3;

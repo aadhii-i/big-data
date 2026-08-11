@@ -1,0 +1,30 @@
+Pig Stack Trace
+---------------
+ERROR 2998: Unhandled internal error. org/apache/commons/collections/buffer/CircularFifoBuffer
+
+java.lang.NoClassDefFoundError: org/apache/commons/collections/buffer/CircularFifoBuffer
+	at org.apache.pig.impl.io.InterRecordReader.skipUntilMarkerOrSplitEndOrEOF(InterRecordReader.java:95)
+	at org.apache.pig.impl.io.InterRecordReader.nextKeyValue(InterRecordReader.java:179)
+	at org.apache.pig.impl.io.InterStorage.getNext(InterStorage.java:79)
+	at org.apache.pig.impl.io.ReadToEndLoader.getNextHelper(ReadToEndLoader.java:238)
+	at org.apache.pig.impl.io.ReadToEndLoader.getNext(ReadToEndLoader.java:218)
+	at org.apache.pig.backend.hadoop.executionengine.HJob$1.hasNext(HJob.java:115)
+	at org.apache.pig.tools.grunt.GruntParser.processDump(GruntParser.java:791)
+	at org.apache.pig.tools.pigscript.parser.PigScriptParser.parse(PigScriptParser.java:383)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:231)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:206)
+	at org.apache.pig.tools.grunt.Grunt.exec(Grunt.java:81)
+	at org.apache.pig.Main.run(Main.java:630)
+	at org.apache.pig.Main.main(Main.java:175)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.apache.hadoop.util.RunJar.run(RunJar.java:333)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:254)
+Caused by: java.lang.ClassNotFoundException: org.apache.commons.collections.buffer.CircularFifoBuffer
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	... 19 more
+================================================================================
