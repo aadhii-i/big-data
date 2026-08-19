@@ -88,6 +88,23 @@ public class TemperatureAnalysis {
         FileInputFormat.addInputPath(job, new Path(args[0]));
         FileOutputFormat.setOutputPath(job, new Path(args[1]));
 
-        System.exit(job.waitForCompletion(true) ? 0 : 1);
+        System.exit(job.waitForCompletion(true) ? 0 : 1);aadhi@aadhi-HP-EliteBook-840-G5:~/big data lab/q1$ echo "========================================"
+echo "Name: Adhil Rahiman M"
+echo "Roll No: 2023BCS0187"
+echo "========================================"
+
+hadoop jar temperature.jar TemperatureAnalysis \
+/user/$USER/q1/input \
+/user/$USER/q1/output
+
+hdfs dfs -cat /user/$USER/q1/output/part-r-00000
+========================================
+Name: Adhil Rahiman M
+Roll No: 2023BCS0187
+========================================
+JAR does not exist or is not a normal file: /home/aadhi/big data lab/q1/temperature.jar
+2026-08-10 15:39:46,419 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+cat: Call From aadhi-HP-EliteBook-840-G5/127.0.1.1 to localhost:9000 failed on connection exception: java.net.ConnectException: Connection refused; For more details see:  http://wiki.apache.org/hadoop/ConnectionRefused
+aadhi@aadhi-HP-EliteBook-840-G5:~/big data lab/q1$ 
     }
 }

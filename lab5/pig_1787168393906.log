@@ -1,0 +1,47 @@
+Pig Stack Trace
+---------------
+ERROR 1121: Python Error. Traceback (most recent call last):
+  File "grade.py", line 1, in <module>
+    from org.apache.pig.scripting import outputSchema
+ImportError: cannot import name outputSchema
+
+org.apache.pig.backend.executionengine.ExecException: ERROR 1121: Python Error. Traceback (most recent call last):
+  File "grade.py", line 1, in <module>
+    from org.apache.pig.scripting import outputSchema
+ImportError: cannot import name outputSchema
+
+	at org.apache.pig.scripting.jython.JythonScriptEngine$Interpreter.execfile(JythonScriptEngine.java:249)
+	at org.apache.pig.scripting.jython.JythonScriptEngine$Interpreter.init(JythonScriptEngine.java:163)
+	at org.apache.pig.scripting.jython.JythonScriptEngine.registerFunctions(JythonScriptEngine.java:344)
+	at org.apache.pig.PigServer.registerCode(PigServer.java:693)
+	at org.apache.pig.parser.RegisterResolver.parseRegister(RegisterResolver.java:57)
+	at org.apache.pig.tools.grunt.GruntParser.processRegister(GruntParser.java:465)
+	at org.apache.pig.tools.pigscript.parser.PigScriptParser.parse(PigScriptParser.java:557)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:231)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:206)
+	at org.apache.pig.tools.grunt.Grunt.exec(Grunt.java:81)
+	at org.apache.pig.Main.run(Main.java:630)
+	at org.apache.pig.Main.main(Main.java:175)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.apache.hadoop.util.RunJar.run(RunJar.java:333)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:254)
+Caused by: Traceback (most recent call last):
+  File "grade.py", line 1, in <module>
+    from org.apache.pig.scripting import outputSchema
+ImportError: cannot import name outputSchema
+
+	at org.python.core.Py.ImportError(Py.java:334)
+	at org.python.core.imp.importFromAs(imp.java:1161)
+	at org.python.core.imp.importFrom(imp.java:1124)
+	at org.python.pycode._pyx3.f$0(grade.py:3)
+	at org.python.pycode._pyx3.call_function(grade.py)
+	at org.python.core.PyTableCode.call(PyTableCode.java:171)
+	at org.python.core.PyCode.call(PyCode.java:18)
+	at org.python.core.Py.runCode(Py.java:1614)
+	at org.python.util.PythonInterpreter.execfile(PythonInterpreter.java:296)
+	at org.apache.pig.scripting.jython.JythonScriptEngine$Interpreter.execfile(JythonScriptEngine.java:217)
+	... 17 more
+================================================================================
