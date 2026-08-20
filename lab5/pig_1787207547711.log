@@ -1,0 +1,24 @@
+Pig Stack Trace
+---------------
+ERROR 1066: Unable to open iterator for alias ranked
+
+org.apache.pig.impl.logicalLayer.FrontendException: ERROR 1066: Unable to open iterator for alias ranked
+	at org.apache.pig.PigServer.openIterator(PigServer.java:1024)
+	at org.apache.pig.tools.grunt.GruntParser.processDump(GruntParser.java:790)
+	at org.apache.pig.tools.pigscript.parser.PigScriptParser.parse(PigScriptParser.java:383)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:231)
+	at org.apache.pig.tools.grunt.GruntParser.parseStopOnError(GruntParser.java:206)
+	at org.apache.pig.tools.grunt.Grunt.exec(Grunt.java:81)
+	at org.apache.pig.Main.run(Main.java:630)
+	at org.apache.pig.Main.main(Main.java:175)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.apache.hadoop.util.RunJar.run(RunJar.java:333)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:254)
+Caused by: java.io.IOException: Couldn't retrieve job.
+	at org.apache.pig.PigServer.store(PigServer.java:1088)
+	at org.apache.pig.PigServer.openIterator(PigServer.java:999)
+	... 13 more
+================================================================================
